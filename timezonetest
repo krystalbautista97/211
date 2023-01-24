@@ -1,0 +1,15 @@
+public class timezone {
+    public static void main(String[] aStrings) {
+        double cest;
+        double pst;
+
+        pst = 0;
+
+        cest = (pst + 9);
+
+        System.out.print(
+            pst + "Time in seattle is"
+            + cest + "Time in copenhagen is");
+
+        
+    }
