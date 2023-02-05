@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class timezone {
+    public static void main(String[] aStrings) {
+        double cest;
+        double pst;
+
+        Scanner input = new Scanner(System.in);
+        String localtime;
+
+        System.out.printIn("Seattle Time");
+        localtime = input 
+    
+
+        String str= input.nextLine();  
+
+        pst = localtime;
+
+        cest = (pst + 9);
+
+        System.out.print(
+            pst + "Time in seattle is", ":00"
+            + cest + "Time in copenhagen is", ":00" + str);
+
+        
+    }
+}
