@@ -1,27 +1,26 @@
-import java.util.Scanner;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
-public class timezone {
-    public static void main(String[] aStrings) {
-        double cest;
-        double pst;
-
-        Scanner input = new Scanner(System.in);
-        String localtime;
-
-        System.out.printIn("Seattle Time");
-        localtime = input 
-    
-
-        String str= input.nextLine();  
-
-        pst = localtime;
-
-        cest = (pst + 9);
-
-        System.out.print(
-            pst + "Time in seattle is", ":00"
-            + cest + "Time in copenhagen is", ":00" + str);
-
+public class Converter {
+    public static void main(String[] args) {
+        // get the current time in PST
+        LocalDateTime pstDateTime = LocalDateTime.now(ZoneId.of("America/Los_Angeles"));
         
+        // convert the PST time to CET
+        ZonedDateTime cetDateTime = pstDateTime.atZone(ZoneId.of("Europe/Paris"));
+        
+        // format the CET time string
+        String formattedCET = cetDateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        
+        // print the PST and CET time strings
+        System.out.println("Current time in PST: " + pstDateTime);
+        System.out.println("Current time in CET: " + formattedCET);
     }
 }
+
+//The program uses the LocalDateTime and ZonedDateTime classes from the java.time package to convert the current time
+// in PST to CET(the time in copenhagen).
+//It converts this LocalDateTime object to a ZonedDateTime object with the atZone method and passing in the ZoneId for CET. 
+//Finally, it takes the CET ZonedDateTime and the DateTimeFormatter class and prints out both the PST and CET time strings.
