@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class Player {
+    private String name;
+    private String ethics;
+    private String favColor;
+    private int strength;
+    private int intelligence;
+    private int agility;
+
+    public Player(String name, String ethics, String favColor, int strength, int intelligence, int agility) {
+        this.name = name;
+        this.ethics = ethics;
+        this.favColor = favColor;
+        this.strength = strength;
+        this.intelligence = intelligence;
+        this.agility = agility;
+    }
+
+    public void displayStats() {
+        System.out.println("Name: " + name);
+        System.out.println("Ethics: " + ethics);
+        System.out.println("Color: " + favColor);
+        System.out.println("Strength: " + strength);
+        System.out.println("Intelligence: " + intelligence);
+        System.out.println("Agility: " + agility);
+    }
+
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("Welcome to silly goose game!! Lets make your goose!");
+            System.out.print("Lets start with your name: ");
+            String name = scanner.nextLine();
+
+            System.out.print("Are you good or evil?: ");
+            String ethics = scanner.nextLine();
+
+            System.out.print("Enter your feather color: ");
+            String favColor = scanner.nextLine();
+
+            System.out.print("Enter your silly-ness level 1-10: ");
+            int strength = scanner.nextInt();
+
+            System.out.print("Enter your clever? How much? 1-10: ");
+            int intelligence = scanner.nextInt();
+
+            System.out.print("Enter you speedy? How much? 1-10: ");
+            int agility = scanner.nextInt();
+
+            Player player = new Player(name, ethics, favColor, strength, intelligence, agility);
+
+            System.out.println("Your goose is born! Use your power wisely!");
+
+            player.displayStats();
+        }
+    }
+}
