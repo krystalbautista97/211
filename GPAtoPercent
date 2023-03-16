@@ -1,0 +1,115 @@
+import java.util.Scanner;
+
+public class GPAtoPercent {
+    public static void main(String[] args) {
+        try (Scanner input = new Scanner(System.in)) {
+            System.out.print("Enter student's GPA: ");
+            double gpa = input.nextDouble();
+
+            int percent = 0;
+            switch ((int)(gpa * 10)) {
+                case 40:
+                    percent = 100;
+                    break;
+                case 39:
+                    percent = 95;
+                    break;
+                case 38:
+                    percent = 94;
+                    break;
+                case 37:
+                    percent = 93;
+                    break;
+                case 36:
+                    percent = 92;
+                    break;
+                case 35:
+                    percent = 91;
+                    break;
+                case 34:
+                    percent = 90;
+                    break;
+                case 33:
+                    percent = 89;
+                    break;
+                case 32:
+                    percent = 88;
+                    break;
+                case 31:
+                    percent = 87;
+                    break;
+                case 30:
+                    percent = 86;
+                    break;
+                case 29:
+                    percent = 85;
+                    break;
+                case 28:
+                    percent = 84;
+                    break;
+                case 27:
+                    percent = 83;
+                    break;
+                case 26:
+                    percent = 82;
+                    break;
+                case 25:
+                    percent = 81;
+                    break;
+                case 24:
+                    percent = 80;
+                    break;
+                case 23:
+                    percent = 79;
+                    break;
+                case 22:
+                    percent = 78;
+                    break;
+                case 21:
+                    percent = 77;
+                    break;
+                case 20:
+                    percent = 76;
+                    break;
+                case 19:
+                    percent = 75;
+                    break;
+                case 18:
+                    percent = 74;
+                    break;
+                case 17:
+                    percent = 73;
+                    break;
+                case 16:
+                    percent = 72;
+                    break;
+                case 15:
+                    percent = 71;
+                    break;
+                case 14:
+                    percent = 70;
+                    break;
+                case 13:
+                    percent = 69;
+                    break;
+                case 12:
+                    percent = 68;
+                    break;
+                case 11:
+                    percent = 67;
+                    break;
+                case 10:
+                    percent = 66;
+                    break;
+                case 0:
+                    percent = 65;
+                    break;
+                default:
+                    System.out.println("Invalid GPA.");
+                    return;
+            }
+
+            System.out.println("Student's GPA of " + gpa + " is in the percent range of < " + percent + "% to " + (percent - 5) + "%.");
+        }
+    }
+}
